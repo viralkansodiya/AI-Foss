@@ -1,0 +1,52 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-03-24 10:05:27.562697",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "attach_tpfx",
+  "prompt_message",
+  "response"
+ ],
+ "fields": [
+  {
+   "fieldname": "attach_tpfx",
+   "fieldtype": "Attach"
+  },
+  {
+   "fieldname": "prompt_message",
+   "fieldtype": "Long Text",
+   "label": "Prompt Message"
+  },
+  {
+   "fieldname": "response",
+   "fieldtype": "Long Text",
+   "label": "Response"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-03-24 20:28:39.731655",
+ "modified_by": "Administrator",
+ "module": "AI Foss",
+ "name": "Convert To Json",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

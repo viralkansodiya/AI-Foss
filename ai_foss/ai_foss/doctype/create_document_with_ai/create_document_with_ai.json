@@ -1,0 +1,65 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-03-24 20:35:24.950270",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "document_type",
+  "document",
+  "prompt_message",
+  "response",
+  "create"
+ ],
+ "fields": [
+  {
+   "fieldname": "document_type",
+   "fieldtype": "Link",
+   "label": "Document Type",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "prompt_message",
+   "fieldtype": "Long Text",
+   "label": "Prompt Message"
+  },
+  {
+   "fieldname": "response",
+   "fieldtype": "JSON",
+   "label": "Response"
+  },
+  {
+   "fieldname": "create",
+   "fieldtype": "Button",
+   "label": "Create"
+  },
+  {
+   "fieldname": "document",
+   "fieldtype": "Attach",
+   "label": "Document"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2025-03-25 09:10:41.256180",
+ "modified_by": "Administrator",
+ "module": "AI Foss",
+ "name": "Create Document with AI",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
