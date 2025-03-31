@@ -12,7 +12,9 @@ frappe.ui.form.on("Data Entry with AI", {
                         pdf_path : frm.doc.document_file
                     },
                     callback : (r) =>{
-                        console.log(r.message)
+                        frm.set_value("reference", r.message)
+                        frm.set_value("status", "Completed")
+                        frappe.msgprint("Document is successfully created")
                     }
                 })
             });

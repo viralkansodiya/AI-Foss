@@ -11,7 +11,9 @@
   "column_break_dtne",
   "status",
   "document_file",
+  "reference",
   "section_break_hten",
+  "prompt_template",
   "prompt_message",
   "response"
  ],
@@ -25,6 +27,7 @@
   {
    "fieldname": "status",
    "fieldtype": "Select",
+   "in_list_view": 1,
    "label": "Status",
    "options": "Pending\nCompleted"
   },
@@ -36,6 +39,8 @@
    "read_only": 1
   },
   {
+   "fetch_from": "prompt_template.prompt_message",
+   "fetch_if_empty": 1,
    "fieldname": "prompt_message",
    "fieldtype": "Long Text",
    "label": "Prompt Message"
@@ -57,12 +62,24 @@
    "fieldname": "document_file",
    "fieldtype": "Attach",
    "label": "Document File"
+  },
+  {
+   "fieldname": "prompt_template",
+   "fieldtype": "Link",
+   "label": "Prompt Template",
+   "options": "Prompt Template"
+  },
+  {
+   "fieldname": "reference",
+   "fieldtype": "Dynamic Link",
+   "label": "Reference",
+   "options": "document_type"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-03-31 12:55:47.254318",
+ "modified": "2025-03-31 16:38:39.011459",
  "modified_by": "Administrator",
  "module": "AI Foss",
  "name": "Data Entry with AI",
