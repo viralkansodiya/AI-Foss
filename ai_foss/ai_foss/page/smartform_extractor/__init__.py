@@ -55,6 +55,7 @@ def create_expense_claim(document_type, employee, file_urls):
             if document_type == "Expense Claim":
                 if employee := frappe.db.exists("Employee", {"user_id" : frappe.session.user}):
                     response_data["employee"] = employee
+                    response_data["expense_approver"] = frappe.db.get_value("Employee", employee, "expense_approver")
 
             response_list.append(response_data)
 
