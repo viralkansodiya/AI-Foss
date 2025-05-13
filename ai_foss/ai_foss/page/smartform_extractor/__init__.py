@@ -13,8 +13,6 @@ def process_uploaded_files(document_type, employee=None, file_urls=None):
     file_urls = frappe.parse_json(file_urls)
     if(document_type == "Expense Claim"):
         return create_expense_claim(document_type, employee, file_urls)
-   
-
 
 
 @frappe.whitelist()
@@ -70,6 +68,14 @@ def create_expense_claim(document_type, employee, file_urls):
 
         new_doc = frappe.get_doc(Main_Expense_Claim)
         new_doc.insert(ignore_permissions=True)
+
+        for row in file_urls:
+            file_doc = frappe.new_doc("File")
+            file_doc.file_url = row
+            file_doc.attached_to_doctype = document_type
+            file_doc.attached_to_name = new_doc.name
+            file_doc.save()
+
         return new_doc
 
     except Exception as e:
